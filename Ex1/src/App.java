@@ -10,7 +10,8 @@ public class App {
         int totalcurtidas = 0;
         int num_pub = entrada.nextInt();
         
-        for(int i=1;;
+        for(int i = 1; 1 >= num_pub; i++) {
+    
 
             System.out.print("Quantas curitidas a publicação #%d recebeu: ");
             int num_curtidas = entrada.nextInt();
