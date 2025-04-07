@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class App1 {
+public class EX2 {
     public static void main(String[] args) { // Corrigido: "Main" -> "main"
         Scanner entrada = new Scanner(System.in);
         int qntprod = 10;
