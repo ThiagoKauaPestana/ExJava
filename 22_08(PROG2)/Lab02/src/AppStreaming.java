@@ -7,7 +7,7 @@ public class AppStreaming {
 
     public static void main(String[] args) {
     
-
+        
 
         List<Midia> midias = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
@@ -100,7 +100,7 @@ public class AppStreaming {
                 }
             } catch (InputMismatchException e) {
 
-                
+
                 System.out.println("Entrada inválida. Por favor, digite um número.");
                 scanner.nextLine(); 
             }
