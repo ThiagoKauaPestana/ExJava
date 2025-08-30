@@ -1,0 +1,30 @@
+Notebook Gamer;5500.00;Dell
+Mouse sem fio;120.50;Logitech
+Teclado Mecânico;350.99;Razer
+Monitor 24 polegadas;1200.00;LG
+Smartphone Top;4300.75;Samsung
+Notebook Vostro;3800.00;Dell
+Smart TV 55" 4K;3199.90;Samsung
+iPhone 15 Pro;8999.00;Apple
+Fone de Ouvido Bluetooth;450.80;Sony
+Tablet Galaxy Tab S9;4999.00;Samsung
+Notebook Gamer Nitro 5;5200.00;Acer
+Cadeira Gamer DT3;1350.50;DT3sports
+SSD NVMe 1TB;599.99;Kingston
+Memória RAM 16GB DDR4;280.00;Corsair
+Placa de Vídeo RTX 4070;4500.00;Nvidia
+Impressora Multifuncional;899.50;HP
+Roteador Wi-Fi 6;499.00;TP-Link
+Geladeira Frost Free Inox;3800.00;Brastemp
+Fritadeira Elétrica Air Fryer;399.90;Mondial
+Micro-ondas 32L Espelhado;750.00;Electrolux
+Aspirador de Pó Robô;1600.00;iRobot
+Console PlayStation 5;4499.90;Sony
+Controle DualSense PS5;429.00;Sony
+Jogo The Last of Us Part I;250.00;Naughty Dog
+Caixa de Som Portátil;299.00;JBL
+Smartwatch Watch 6;2100.00;Samsung
+Câmera Digital Mirrorless;6500.00;Canon
+Webcam Full HD;180.00;Logitech
+Livro "Código Limpo";95.00;Alta Books
+Máquina de Lavar 12kg;2300.00;LG
