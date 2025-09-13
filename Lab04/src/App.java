@@ -24,7 +24,6 @@ class Main {
         while (rs.next()) {
             long nro = rs.getLong("nro_conta");
             BigDecimal saldo = rs.getBigDecimal("saldo");
-
             System.out.println("Conta numero: " + nro + " tem saldo de R$ " + saldo);
         }
 
