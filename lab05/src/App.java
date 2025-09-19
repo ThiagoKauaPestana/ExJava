@@ -22,7 +22,7 @@ public class App {
                 System.out.println("(0) Sair");
                 System.out.print("Escolha uma opção: ");
                 opcao = scanner.nextInt();
-                scanner.nextLine(); // Consome a quebra de linha
+                scanner.nextLine(); 
 
                 switch (opcao) {
                     case 1:
