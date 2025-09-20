@@ -10,7 +10,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class TitularAppApplication implements CommandLineRunner {
 
-    // Agora injetamos o DAO, em vez do Repo diretamente
     @Autowired
     private TitularDao titularDao;
 
@@ -59,7 +58,6 @@ public class TitularAppApplication implements CommandLineRunner {
         print("\nPrograma finalizado.");
     }
 
-    // (1) Listar todos os titulares
     private void listar() {
         print("\n# LISTA DE TITULARES");
         Iterable<Titular> titulares = titularDao.findAll();
@@ -72,7 +70,6 @@ public class TitularAppApplication implements CommandLineRunner {
         }
     }
 
-    // (2) Buscar um titular específico pelo número
     private void buscar() {
         print("\n# BUSCA DE TITULAR");
         try {
@@ -89,7 +86,7 @@ public class TitularAppApplication implements CommandLineRunner {
         }
     }
 
-    // (3) Criar um novo titular
+
     private void criar() {
         print("\n# NOVO TITULAR");
         String nome = input("Digite o nome: ");
@@ -103,7 +100,7 @@ public class TitularAppApplication implements CommandLineRunner {
         print("Titular criado com sucesso! Número: " + novoTitular.getId());
     }
 
-    // (4) Alterar os dados do titular
+
     private void alterar() {
         print("\n# ALTERAR TITULAR");
         try {
@@ -134,7 +131,6 @@ public class TitularAppApplication implements CommandLineRunner {
         }
     }
 
-    // (5) Apagar um titular
     private void apagar() {
         print("\n# APAGAR TITULAR");
         try {
