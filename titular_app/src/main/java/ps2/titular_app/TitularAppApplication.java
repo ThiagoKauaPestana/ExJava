@@ -11,7 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class TitularAppApplication implements CommandLineRunner {
 
     @Autowired
-    private TitularDao titularDao;
+    private TitularRepo titularRepo;
 
     public static void main(String[] args) {
         SpringApplication.run(TitularAppApplication.class, args);
@@ -60,7 +60,7 @@ public class TitularAppApplication implements CommandLineRunner {
 
     private void listar() {
         print("\n# LISTA DE TITULARES");
-        Iterable<Titular> titulares = titularDao.findAll();
+        Iterable<Titular> titulares = titularRepo.findAll();
         if (!titulares.iterator().hasNext()) {
             print("Nenhum titular cadastrado.");
             return;
@@ -74,7 +74,7 @@ public class TitularAppApplication implements CommandLineRunner {
         print("\n# BUSCA DE TITULAR");
         try {
             long id = Long.parseLong(input("Digite o número do titular: "));
-            Optional<Titular> titularOpt = titularDao.findById(id);
+            Optional<Titular> titularOpt = titularRepo.findById(id);
             if (titularOpt.isPresent()) {
                 print("Titular encontrado:");
                 print(titularOpt.get().toString());
@@ -86,7 +86,6 @@ public class TitularAppApplication implements CommandLineRunner {
         }
     }
 
-
     private void criar() {
         print("\n# NOVO TITULAR");
         String nome = input("Digite o nome: ");
@@ -96,16 +95,15 @@ public class TitularAppApplication implements CommandLineRunner {
         novoTitular.setNome(nome);
         novoTitular.setCpf(cpf);
         
-        titularDao.save(novoTitular);
+        titularRepo.save(novoTitular);
         print("Titular criado com sucesso! Número: " + novoTitular.getId());
     }
-
 
     private void alterar() {
         print("\n# ALTERAR TITULAR");
         try {
             long id = Long.parseLong(input("Digite o número do titular que deseja alterar: "));
-            Optional<Titular> titularOpt = titularDao.findById(id);
+            Optional<Titular> titularOpt = titularRepo.findById(id);
 
             if (titularOpt.isPresent()) {
                 Titular titular = titularOpt.get();
@@ -121,7 +119,7 @@ public class TitularAppApplication implements CommandLineRunner {
                     titular.setCpf(novoCpf);
                 }
                 
-                titularDao.save(titular);
+                titularRepo.save(titular);
                 print("Titular alterado com sucesso!");
             } else {
                 print("Titular com o número " + id + " não encontrado.");
@@ -136,9 +134,8 @@ public class TitularAppApplication implements CommandLineRunner {
         try {
             long id = Long.parseLong(input("Digite o número do titular que deseja apagar: "));
             
-            // Verifica se o titular existe antes de tentar apagar
-            if (titularDao.findById(id).isPresent()) {
-                titularDao.deleteById(id);
+            if (titularRepo.findById(id).isPresent()) {
+                titularRepo.deleteById(id);
                 print("Titular número " + id + " apagado com sucesso!");
             } else {
                 print("Titular com o número " + id + " não encontrado.");
